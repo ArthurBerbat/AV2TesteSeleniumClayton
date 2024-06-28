@@ -27,7 +27,7 @@ public class ProdutoTest extends BaseTest {
 
     @Test
     public void deveSalvarProdutoComSucesso() {
-        produtoPO.preencherCampos("001", "Produto Teste", "10.00", "01/01/2025");
+        produtoPO.preencherCampos("001", "Produto Teste", "10.00", "5", "01/01/2025");
         produtoPO.clicarSalvar();
         String mensagem = produtoPO.obterMensagem();
         assertTrue(mensagem.isEmpty()); // Supondo que nenhuma mensagem seja exibida em caso de sucesso

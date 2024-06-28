@@ -12,8 +12,11 @@ public class ProdutoPO extends BasePO {
     @FindBy(id = "nome")
     public WebElement inputNome;
 
-    @FindBy(id = "preco")
-    public WebElement inputPreco;
+    @FindBy(id = "valor")
+    public WebElement inputValor;
+
+    @FindBy(id = "quantidade")
+    public WebElement inputQuantidade;
 
     @FindBy(id = "dataValidade")
     public WebElement inputDataValidade;
@@ -47,16 +50,19 @@ public class ProdutoPO extends BasePO {
      * Método para preencher os campos do produto
      * @param codigo Código do produto
      * @param nome Nome do produto
-     * @param preco Preço do produto
+     * @param valor Valor do produto
+     * @param quantidade Quantidade do produto
      * @param dataValidade Data de validade do produto
      * */
-    public void preencherCampos(String codigo, String nome, String preco, String dataValidade) {
+    public void preencherCampos(String codigo, String nome, String valor, String quantidade, String dataValidade) {
         inputCodigo.clear();
         inputCodigo.sendKeys(codigo);
         inputNome.clear();
         inputNome.sendKeys(nome);
-        inputPreco.clear();
-        inputPreco.sendKeys(preco);
+        inputValor.clear();
+        inputValor.sendKeys(valor);
+        inputQuantidade.clear();
+        inputQuantidade.sendKeys(quantidade);
         inputDataValidade.clear();
         inputDataValidade.sendKeys(dataValidade);
     }
